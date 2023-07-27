@@ -10,7 +10,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: pwd && ls -al
+      - run: pwd && ls -al && cd sample-packages/npm && ls -al
+      - run: npm ci
+      - run: npm test
+
 
 
   publish-gpr:
